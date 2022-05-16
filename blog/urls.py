@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+<<<<<<< HEAD
 from django.urls import path, include
 from homepage.views import homepage_view
 
@@ -22,4 +23,10 @@ urlpatterns = [
     path('dashboard/', admin.site.urls),
     path('', homepage_view),
     path('post/', include('post.urls'))
+=======
+from django.urls import path
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+>>>>>>> parent of 3bf5413 (play with url)
 ]
