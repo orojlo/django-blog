@@ -1,12 +1,21 @@
-from django.http import HttpResponse
-from django.shortcuts import render
-
-# Create your views here.
+from django.shortcuts import render, HttpResponse
 
 
-def homepage_view(request):
-    return HttpResponse('<h1>Hello</h1>')
+def index_view(request):
+    return HttpResponse("Sample")
 
 
-def about(request):
-    return HttpResponse('<h1>Nothing For now! </h1>')
+def create_view(request):
+    return HttpResponse("Sample")
+
+
+def detail_view(request):
+    return HttpResponse("Sample")
+
+
+def update_view(request):
+    return HttpResponse("Sample")
+
+
+def delete_view(request):
+    return HttpResponse("Sample")
