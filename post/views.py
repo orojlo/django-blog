@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, get_object_or_404
 from .models import Post
 # Create your views here.
 
@@ -13,7 +13,8 @@ def create_view(request):
 
 
 def detail_view(request):
-    return HttpResponse("Detail")
+    post = get_object_or_404(Post, id=1)
+    return render(request, 'post/detail.html', {"post": post})
 
 
 def update_view(request):
